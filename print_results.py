@@ -62,12 +62,11 @@ def print_results(results_dic, results_stats_dic, model,
     Returns:
            None - simply printing results.
     """    
-    print(f"CNN Model : {model}")
-    print(f"Number of Images : {results_stats_dic['n_images']}")
-    print(f"Number of Dog images : {results_stats_dic['n_dogs_img']}")
-    print(f"Number of Not-a Dog images : {results_stats_dic['n_notdogs_img']}")
-    print(f"{results_stats_dic['pct_correct_dogs']}% Correct Dogs")
-    print(f"{results_stats_dic['pct_correct_breed']}% Correct Breed")
-    print(f"{results_stats_dic['pct_correct_notdogs']}% Correct Not-a Dog")
-    print(f"{results_stats_dic['pct_match']}% Match")
-                
+    print("CNN Model : {}".format(model))
+    print("Number of Images : {}".format(results_stats_dic['n_images']))
+    print("Number of Dog images : {}".format(results_stats_dic['n_dogs_img']))
+    print("Number of Not-a Dog images : {}".format(results_stats_dic['n_notdogs_img']))
+    print("{0:.2f}% Correct Dogs".format(results_stats_dic['pct_correct_dogs']))
+    print("{0:.2f}% Correct Breed".format(results_stats_dic['pct_correct_breed']))
+    print("{0:.2f}% Correct Not-a Dog".format(results_stats_dic['pct_correct_notdogs']))
+    print("{0:.2f}% Match".format(results_stats_dic['pct_match']))

@@ -18,6 +18,7 @@
 ##
 # Imports python modules
 from os import listdir
+from re import sub
 
 # TODO 2: Define get_pet_labels function below please be certain to replace None
 #       in the return statement with results_dic dictionary that you create 
@@ -43,9 +44,8 @@ def get_pet_labels(image_dir):
     filename_list = listdir(image_dir)
     results_dic = dict()
     for filename in filename_list:
-        label = filename.split("_")
-        label.pop()
-        label = ' '.join(label).lower().strip()
+        label = sub(r'\d+', '', filename).strip(".jpg")
+        label = sub(r'_', ' ', label).lower().strip()
         if filename not in results_dic:
             results_dic[filename] = [label]
         else:     
