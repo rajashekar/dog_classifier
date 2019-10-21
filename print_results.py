@@ -62,6 +62,31 @@ def print_results(results_dic, results_stats_dic, model,
     Returns:
            None - simply printing results.
     """    
+    if (print_incorrect_dogs and
+        ((results_stats_dic['n_correct_dogs'] + 
+          results_stats_dic['n_correct_notdogs'])
+         != results_stats_dic['n_images'])
+        ):
+        print("\nIncorrectly classified dog images : ")
+        for key in results_dic:
+            if sum(results_dic[key][3:]) == 1:
+                if results_dic[key][4]:
+                    actual = "dog"
+                else: 
+                    actual = "not a dog"
+                print("{} is classified as {}".format(key, actual))
+
+    if (print_incorrect_breed and
+        (results_stats_dic['n_correct_dogs'] !=
+         results_stats_dic['n_correct_breed'])
+       ):
+       print("\nIncorrect dog breed assignment : ")
+       for key in results_dic:
+           if(sum(results_dic[key][3:]) == 2 and 
+              results_dic[key][2] == 0):
+               print("Real: {:>26}   Classifier: {:>30}".format(results_dic[key][0],
+                                                          results_dic[key][1]))
+
     print("CNN Model : {}".format(model))
     print("Number of Images : {}".format(results_stats_dic['n_images']))
     print("Number of Dog images : {}".format(results_stats_dic['n_dogs_img']))

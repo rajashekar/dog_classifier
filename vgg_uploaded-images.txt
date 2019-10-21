@@ -58,6 +58,10 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
  ** Check Statistics - calculated from this function as a check:
 N Images:  4  N Dog Images:  2  N NotDog Images:  2 
 Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+Incorrect dog breed assignment : 
+Real:                        dog   Classifier:                     great dane
+Real:                        dog   Classifier:                     great dane
 CNN Model : vgg
 Number of Images : 4
 Number of Dog images : 2
@@ -67,4 +71,4 @@ Number of Not-a Dog images : 2
 100.00% Correct Not-a Dog
 0.00% Match
 
-** Total Elapsed Runtime: 0:0:3
+** Total Elapsed Runtime: 0:0:2

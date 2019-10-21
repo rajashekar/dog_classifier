@@ -316,6 +316,14 @@ Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed:  90.0
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
 Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed:  90.0
+
+Incorrectly classified dog images : 
+cat_01.jpg is classified as dog
+
+Incorrect dog breed assignment : 
+Real:                     beagle   Classifier:  walker hound, walker foxhound
+Real:           golden retriever   Classifier:                       leonberg
+Real:             great pyrenees   Classifier:                         kuvasz
 CNN Model : resnet
 Number of Images : 40
 Number of Dog images : 30

@@ -316,6 +316,10 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  93.3
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
 Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  93.3
+
+Incorrect dog breed assignment : 
+Real:                     beagle   Classifier:  walker hound, walker foxhound
+Real:             great pyrenees   Classifier:                         kuvasz
 CNN Model : vgg
 Number of Images : 40
 Number of Dog images : 30
@@ -325,4 +329,4 @@ Number of Not-a Dog images : 10
 100.00% Correct Not-a Dog
 87.50% Match
 
-** Total Elapsed Runtime: 0:0:29
+** Total Elapsed Runtime: 0:0:20
