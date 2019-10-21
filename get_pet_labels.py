@@ -44,7 +44,12 @@ def get_pet_labels(image_dir):
     filename_list = listdir(image_dir)
     results_dic = dict()
     for filename in filename_list:
+        # skip hidden files start with '.' 
+        if filename.startswith('.'):
+            continue
+        # strip extension '.jpg' and digits
         label = sub(r'\d+', '', filename).strip(".jpg")
+        # replace '_' with space and strip trailing spaces
         label = sub(r'_', ' ', label).lower().strip()
         if filename not in results_dic:
             results_dic[filename] = [label]
